@@ -11,7 +11,9 @@ int main() {
         sum += arr[i];
     }
 
-    cout << "Sum: " << sum;
+    double average = (double)sum / size;
+
+    cout << "Average: " << average;
 
     return 0;
 }
