@@ -3,12 +3,15 @@
 using namespace std;
 
 int mergesort(int arr[], int left, int mid, int right) {
-    int n1 = mid - left + 1;
+    // Create temporary arrays to hold the left and right subarrays
+    // n1 is the size of the left subarray, and n2 is the size of the right subarray
+    int n1 = mid - left + 1;  
     int n2 = right - mid;
-
+    // Allocate memory for the temporary arrays
+    // 
     int* L = new int[n1];
     int* R = new int[n2];
-
+    // run a loop to copy the elements from the original array to the temporary arrays
     for (int i = 0; i < n1; i++)
         L[i] = arr[left + i];
     for (int j = 0; j < n2; j++)
